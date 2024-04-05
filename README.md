@@ -1,7 +1,7 @@
 ## Extending Libraries/Packages
 Here are a couple of examples of how I make my data science workflow a little more convenient as it relates to extracting, cleaning, and summarizing data with pandas and SQLalchemy, but especially pandas_flavor (yum). We never want to store intermediate data sets in production code if it can be avoided, which is the major motivation for chaining methods in a scalable data science workflow. While you can "monkey-patch" a library to 'add' a method you would like to chain, this is not the best practice and can backfire when sharing your ecosystem, attempting to avoid version control issues, or possibly overriding a pre-existing method yikes! Ultimately, the biggest motivation for extending a package compared to just writing the same method as a function in your script is that it allows you to reliably chain your custom methods. then just import your package with the method you like as one might expect:
 
-#### For example: ```from <package>.<folder_containing_your_extended_methods> import <your_method>
+#### For example: ```from <package>.<folder_containing_your_extended_methods> import <your_method>```
 
 ### Pandas Flavoring and Decorators: See ```time_series.py``` for Use case
 - Many data scientists manipulate data in Python through a classic combo of NumPy and Pandas (although Polars are getting pretty enticing...) 
